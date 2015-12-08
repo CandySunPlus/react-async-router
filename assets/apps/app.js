@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {RouteHandler} from 'react-router';
 
+const {Component} = React;
 
-export default class App extends Component{
+
+export default class App extends Component {
   render() {
     return (
       <div>

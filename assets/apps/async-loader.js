@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
 /**
  * 异步的组件
  */
-module.exports = function asyncLoader(component) {
+export default function asyncLoader(component) {
   return React.createClass({
     getInitialState() {
       return {
@@ -15,18 +15,18 @@ module.exports = function asyncLoader(component) {
 
     componentDidMount() {
       //模拟出loading的效果
-      // setTimeout(() => {
-      //   component((Component) => {
-      //     this.setState({
-      //       Component: Component
-      //     });
-      //   });
-      // }, 1000);
-      component((Component) => {
-        this.setState({
-          Component: Component
-        });
-      });
+       setTimeout(() => {
+         component((Component) => {
+           this.setState({
+             Component: Component
+           });
+         });
+       }, 1000);
+      //component((Component) => {
+      //  this.setState({
+      //    Component: Component
+      //  });
+      //});
     },
 
 

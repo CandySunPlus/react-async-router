@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link, RouteHandler} from 'react-router';
 
-
+const {Component} = React;
 /**
  * inbox app
  */
